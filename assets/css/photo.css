@@ -1,0 +1,67 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+div.global{
+    width: 320px;
+    margin: 8% auto 0;
+    position: relative}
+
+div.container{
+   perspective: 600px;
+}
+
+div.container:hover > div.page{
+    transform: rotateY(180deg);
+    transform-origin: 160px 0px;
+}
+
+div.container, div.avant, div.arriere{
+    width:320px;
+    height:458px;
+}
+
+div.page{
+    transition: .5s;
+    transform-style: preserve-3d; 
+}
+
+div.avant, div.arriere{
+    backface-visibility: hidden;
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+div.avant{
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+div.arriere{
+    transform: rotateY(180deg);
+    background: black;
+    padding: 25px;
+    color: white;
+}
+
+div.arriere > a{
+    display: block;
+    height: 30px;
+    width: 200px;
+    margin:20px auto 0;
+    border: 1px solid white;
+    text-decoration: none;
+    color:orangered;
+    border-radius: 20px;
+    text-align:center;
+    line-height: 30px;
+    
+}
+
+div.arriere >p{
+    margin-top: 20px;
+
+}

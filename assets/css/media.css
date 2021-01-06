@@ -1,0 +1,167 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+.topnav{
+
+    background: #333;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+
+}
+
+ul > a > img{
+    width: 34px;
+    height: 20px;
+}
+
+.topnav > ul{list-style: none}
+
+
+.topnav a:hover{background: crimson;
+color: white;}
+
+.topnav > ul > a {
+    display: block;
+    float:left;
+    color:white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    height: 53px;
+}
+
+.active {background: white}
+
+.topnav .icon{display:none
+}
+
+main{
+    width:100%;
+    background:#000;
+    padding-top: 80px;
+
+
+}
+
+h1, h2{font-size: 30px;
+color:gainsboro;
+text-align: center;
+}
+
+section{
+        width:100%;
+        height: 100vh;
+        padding: 80px;
+    }
+
+    section:first-of-type{background:red;}
+    section:nth-of-type(2){background:blue;}
+    section:nth-of-type(3){background:green;}
+    section:last-of-type{background:yellow;}
+
+
+    #a{
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        z-index: 2;
+        display: inline-block;
+        transform: translate(0, -50%);
+        text-decoration: none;
+        color: white;
+    }
+    
+    #a span{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 30px;
+        height: 50px;
+        margin-left: -15px;
+        border: 2px solid white;
+        border-radius: 50px;
+    }
+    
+    #a span::before{
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        content: '';
+        width: 6px;
+        height: 6px;
+        background: white;
+        border-radius: 50%;
+        margin-left: -3px;
+        animation: bille 2s infinite;
+    }
+    
+    @keyframes bille {
+    
+        0% {
+            transform: translate(0,0);
+            opacity: 0;
+            }
+    
+        40% {
+            opacity: 1}
+    
+        80%{
+            transform: translate(0, 20px); 
+            opacity:0;
+        }
+        
+        100% {
+            opacity: 0;
+        }
+    }
+
+/* début responsive ecran taille inferieur de 680px appel js ouverture et fermeture .icon */
+
+@media screen and (max-width: 600px){
+    .topnav a:not(:first-child){
+        display:none;
+    }
+
+    section{padding:600px;}
+    .topnav a.icon{
+        float: right;
+        display: block;
+        height: 53px;
+        color: white;
+        font-size: 20px;
+        background: transparent;
+        transition: .8s;
+    
+    }
+}
+
+/* responsive topnav liens a la vertical */
+
+@media screen and (max-width: 600px){
+
+    .topnav.responsive{position:fixed}
+    .topnav.responsive a.icon{
+        position: absolute;
+        right: 0;
+        top: 0;
+        color:black;
+        transform: rotate(90deg);
+
+    }
+    .topnav.responsive a{
+        float: none;
+        text-align: left;
+        display: block;
+    }
+}
+
+
+

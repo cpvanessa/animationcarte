@@ -1,0 +1,81 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+.topnav{
+
+    background: #333;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+
+}
+
+ul > a > img{
+    width: 34px;
+    height: 20px;
+}
+
+.topnav > ul{list-style: none}
+
+
+.topnav a:hover{background: crimson;
+color: white;}
+
+.topnav > ul > a {
+    display: block;
+    float:left;
+    color:white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    height: 53px;
+}
+
+.active {background: white}
+
+.topnav .icon{display:none
+}
+
+/* début responsive ecran taile infeferieur de 680px appel js ouverture et fermeture .icon */
+
+@media screen and (max-width: 600px){
+    .topnav a:not(:first-child){
+        display:none;
+    }
+    .topnav a.icon{
+        float: right;
+        display: block;
+        height: 53px;
+        color: white;
+        font-size: 20px;
+        background: transparent;
+        transition: .8s;
+    
+    }
+}
+
+/* responsive topnav liens a la vertical */
+
+@media screen and (max-width: 600px){
+
+    .topnav.responsive{position:fixed}
+    .topnav.responsive a.icon{
+        position: absolute;
+        right: 0;
+        top: 0;
+        color:black;
+        transform: rotate(90deg);
+
+    }
+    .topnav.responsive a{
+        float: none;
+        text-align: left;
+        display: block;
+    }
+}

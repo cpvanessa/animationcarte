@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+/* selecteur universelle */
+
+main#wrap{ width: 800px;
+margin: auto;}
+/* selecteur pour appel d'un id */
+
+section > h1,p{color:red;}
+/* selecteur enfants directe à l'interieur de section et viergule pour nommer les elements*/
+
+section + p {color:green;}
+/* un selecteur adjacent cible l'element qui est immediatement après la fermeture d'une balise soit la 1ere ligne */
+
+article ~ p, h2{color: orange}
+/* combinateur de freres est proche de + toutefois strcit-portée plus generale */
+
+a[title]{text-decoration: none; color: darksalmon;}
+/* selecteur attribut */
+
+/* a[href="http://www.doranco.fr"]{color:gray; text-decoration:none;} */
+
+/* a[href*="dora"]{color:gray; text-decoration:none;} */
+
+li > a[href^="http"]{
+    background: url(../images/logo.jpg) 0 5px no-repeat;
+    text-decoration: none;
+    padding: 0 30px;
+    color: black;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+   
+
+}
+ul{list-style: none;}
+/* selecteur caret ^ début de chaine */
