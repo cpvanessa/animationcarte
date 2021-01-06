@@ -4,13 +4,13 @@
     box-sizing: border-box;
 }
 
-div.global{
-    width: 320px;
-    margin: 8% auto 0;
-    position: relative}
+
 
 div.container{
    perspective: 600px;
+   width: 320px;
+   margin: 8% auto 0;
+   position: relativ
 }
 
 div.container:hover > div.page{
